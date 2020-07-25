@@ -39,10 +39,10 @@ RUN apt-get update && apt-get install -y \
   # Java runtime environment (e.g. for arara)
   "$JRE" && \
   # Windows fonts
-  wget -q https://www.tug.org/fonts/getnonfreefonts/install-getnonfreefonts && \
-  texlua ./install-getnonfreefonts && \
-  getnonfreefonts --sys -a && \
-  rm ./install-getnonfreefonts && \\
+  #wget -q https://www.tug.org/fonts/getnonfreefonts/install-getnonfreefonts && \
+  #texlua ./install-getnonfreefonts && \
+  #getnonfreefonts --sys -a && \
+  #rm ./install-getnonfreefonts && \\
   # Removing documentation packages *after* installing them is kind of hacky,
   # but it only adds some overhead while building the image.
   apt-get --purge remove -y .\*-doc$ && \
