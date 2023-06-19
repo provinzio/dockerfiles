@@ -39,5 +39,4 @@ jobs:
           context: latex
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: jeppy/latex:${{ steps.meta.outputs.tags }}
